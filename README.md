@@ -1,10 +1,11 @@
 # Captrack
 
-Need to properly learn Rails. Also want to create a little database program.
- 
-Keep track of electronics purchased from digikey, etc. and what projects ended up using it.
+Keep track of BOMs purchased from digikey and what projects end up using it.
 
-Things you may want to cover:
+
+## Why
+
+Need to properly learn Rails. Also want to create a little database program.
 
 ## Req.
 
@@ -23,4 +24,17 @@ TODO: Deploy product live on Docker, also on old school capistrano
 
 ## Schema
 
-Start with replicating DigiKey.
+Start with replicating DigiKey for Products.
+Then create new model of Project. Project can require many Products to complete.
+A User has an Inventory. An Inventory is the quantity of Products he/she has on hand.
+User has many Products. Products can decrement Inventories.
+
+## Interaction
+
+Website is driven by basic static pages for now. Add React + API later for use on Mobile.
+
+## Future ideas
+
+- Digikey Integration
+ - Check quantity
+ - Direct Ordering
