@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_08_094022) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_08_113805) do
+  create_table "kits", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "project_id", null: false
+    t.index ["project_id"], name: "index_kits_on_project_id"
+  end
+
   create_table "products", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -23,4 +30,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_08_094022) do
     t.index ["part_number"], name: "index_products_on_part_number"
   end
 
+  create_table "projects", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "kits", "projects"
 end
