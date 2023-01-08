@@ -33,8 +33,13 @@ User has many Products. Products can decrement Inventories.
 
 Website is driven by basic static pages for now. Add React + API later for use on Mobile.
 
+Create products. Submit kits for the products. Then add my inventory of products on-hand.
+Then compare to see what's missing, etc.
+Adding a kit will mass-delete. If I happen to use extras I can always delete one of each extra.
+
 ## Future ideas
 
 - Digikey Integration
  - Check quantity
  - Direct Ordering
+- A few auth methods
