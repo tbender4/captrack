@@ -11,8 +11,11 @@
 /db/*.sqlite3
 /db/*.sqlite3-*
 
-# ignore database.yml
+# Ignore database.yml
 config/database.yml
+
+# Ignore vscode
+.vscode/
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -36,3 +39,4 @@ config/database.yml
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+

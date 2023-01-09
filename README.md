@@ -13,6 +13,22 @@ Need to properly learn Rails. Also want to create a little database program.
 - Rails 7.0.4
 - MySQL 8
 
+## Setup
+
+1. Obtain Ruby 3.2.0 from rbenv/rvm
+2. Install MySQL 8, set creds in `config/database.yml`.
+3. Install dependencies with `bundle install --jobs "$(getconf _NPROCESSORS_ONLN)"`
+
+fresh db setup:
+
+```
+rails db:create
+rails db:schema:load
+rails db:schema:migrate
+```
+
+Run with `rails s`
+
 ## Docker
 
 Access DB:
@@ -20,7 +36,7 @@ Access DB:
 mysql -h127.0.0.1 -pdev -uroot
 ```
 
-TODO: Deploy product live on Docker, also on old school capistrano
+TODO: Docker Dev, Prod files
 
 ## Schema
 
